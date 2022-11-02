@@ -30,7 +30,7 @@ function App() {
       {/* <Webtesting /> */}
       {/* <Chart /> */}
       <Sidebar />
-      <Homepage />
+      {/* <Homepage /> */}
     </>
   );
 }

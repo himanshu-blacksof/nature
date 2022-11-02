@@ -103,7 +103,7 @@ const Sidebar = () => {
             ))}
           </ul>
         </div>
-        <div className="p-7  flex-1 h-screen bg-black ">
+        <div className="p-7 flex-1  h-screen bg-black ">
           <Homepage />
         </div>
       </div>

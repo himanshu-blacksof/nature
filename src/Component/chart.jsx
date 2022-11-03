@@ -1,70 +1,72 @@
-// import React from 'react';
-// import CanvasJSReact from './canvasjs.react';
-// // var CanvasJS = CanvasJSReact.CanvasJS;
-// var CanvasJSChart = CanvasJSReact.CanvasJSChart;
-// var CanvasJS = require('canvasjs');
+import React from 'react';
+import {
+  LineChart,
+  ResponsiveContainer,
+  Legend,
+  Tooltip,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+} from 'recharts';
 
-// const Chart = () => {
-//   const options = {
-//     animationEnabled: true,
-//     theme: 'light2',
-//     title: {
-//       text: 'Stock Price of BMW - March 2018 and April 2022',
-//     },
-//     axisX: {
-//       valueFormatString: 'DD MMM',
-//       crosshair: {
-//         enabled: true,
-//         snapToDataPoint: true,
-//       },
-//     },
-//     axisY: {
-//       title: 'Closing Price (in ind)',
-//       valueFormatString: '€##0.00',
-//       crosshair: {
-//         enabled: true,
-//         snapToDataPoint: true,
-//         labelFormatter: function (e) {
-//           return '€' + CanvasJS.formatNumber(e.value, '##0.00');
-//         },
-//       },
-//     },
-//     data: [
-//       {
-//         type: 'area',
-//         xValueFormatString: 'DD MMM',
-//         yValueFormatString: '€##0.00',
-//         dataPoints: [
-//           { x: new Date('2018-03-01'), y: 85.3 },
-//           { x: new Date('2018-03-02'), y: 83.97 },
-//           { x: new Date('2018-03-05'), y: 83.49 },
-//           { x: new Date('2018-03-06'), y: 84.16 },
-//           { x: new Date('2018-03-07'), y: 84.86 },
-//           { x: new Date('2018-03-08'), y: 84.97 },
-//           { x: new Date('2018-03-09'), y: 85.13 },
-//           { x: new Date('2018-03-12'), y: 85.71 },
-//           { x: new Date('2018-03-13'), y: 84.63 },
-//           { x: new Date('2018-03-14'), y: 84.17 },
-//           { x: new Date('2018-03-15'), y: 85.12 },
-//           { x: new Date('2018-03-16'), y: 85.86 },
-//           { x: new Date('2018-03-19'), y: 85.17 },
-//           { x: new Date('2018-03-20'), y: 85.99 },
-//           { x: new Date('2018-03-21'), y: 86.1 },
-//           { x: new Date('2018-03-22'), y: 85.33 },
-//           { x: new Date('2018-03-23'), y: 84.18 },
-//           { x: new Date('2018-03-26'), y: 85.21 },
-//           { x: new Date('2018-03-27'), y: 85.81 },
-//           { x: new Date('2018-03-28'), y: 85.56 },
-//           { x: new Date('2018-03-29'), y: 88.15 },
-//         ],
-//       },
-//     ],
-//   };
-//   return (
-//     <div>
-//       <CanvasJSChart options={options} data={options} />
-//     </div>
-//   );
-// };
+const pdata = [
+  {
+    name: 'MongoDb',
+    student: 11,
+    fees: 120,
+  },
+  {
+    name: 'Javascript',
+    student: 15,
+    fees: 12,
+  },
+  {
+    name: 'PHP',
+    student: 5,
+    fees: 10,
+  },
+  {
+    name: 'Java',
+    student: 10,
+    fees: 5,
+  },
+  {
+    name: 'C#',
+    student: 9,
+    fees: 4,
+  },
+  {
+    name: 'C++',
+    student: 10,
+    fees: 8,
+  },
+];
 
-// export default Chart;
+function Chart() {
+  return (
+    <>
+      <div className="items-center bg-white w-[80%] m-auto py-6  shadow-lg ">
+        <h1 className="px-8 py-5 text-lg font-semibold">
+          Monthly Sign Up Statistics
+        </h1>
+        <ResponsiveContainer width=" 90%" className="m-auto" aspect={3}>
+          <LineChart
+            data={pdata}
+            className="items-center justify-center text-center m-auto"
+          >
+            <CartesianGrid />
+            <XAxis dataKey="name" interval={'preserveStartEnd'} />
+            <YAxis></YAxis>
+            <Legend />
+            <Tooltip />
+            <Line dataKey="student" stroke="black" activeDot={{ r: 8 }} />
+            <Line dataKey="fees" stroke="red" activeDot={{ r: 8 }} />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+    </>
+  );
+}
+
+export default Chart;

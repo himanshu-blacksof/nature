@@ -9,16 +9,15 @@ import HideShow from './Component/hide&show';
 import Form from './Component/form';
 import Rendering from './Component/rendering';
 import Webtesting from './Component/webtesting';
-import Chart from './Component/chart';
 import Sidebar from './Component/sidebar';
-import Homepage from './Component/homepage';
+import Table from './Component/table';
 
 function App() {
   return (
     <>
-      {/* <Landing />
-      <Home /> 
-      <Footer /> */}
+      {/* <Landing /> */}
+      {/* <Home /> */}
+      {/* <Footer /> */}
       {/* <Practice name="himanshu" />
       <Practice name="abc" />
       <Practice name="hello" />
@@ -28,9 +27,8 @@ function App() {
       <Form />
       <Rendering /> */}
       {/* <Webtesting /> */}
-      {/* <Chart /> */}
-      <Sidebar />
-      {/* <Homepage /> */}
+      {/* <Sidebar /> */}
+      <Table />
     </>
   );
 }

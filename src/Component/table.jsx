@@ -8,114 +8,99 @@ const Tables = () => {
   const dataSource = [
     {
       key: '1',
-      name: 'Mike',
-      age: 32,
-      address: '10 Downing Street',
+      companyname: 'AEP Ohio',
+      type: 'Electric',
+      state: 'ohio',
+      udc: 'opc',
+      active: 'yes',
+      date: '05/10/2015',
     },
     {
       key: '2',
-      name: 'John',
-      age: 42,
-      address: '10 Downing Street',
+      companyname: 'AEP Ohio',
+      type: 'Electric',
+      state: 'ohio',
+      udc: 'opc',
+      active: 'yes',
+      date: '05/10/2015',
+    },
+    {
+      key: '3',
+      companyname: 'AEP Ohio',
+      type: 'Electric',
+      state: 'ohio',
+      udc: 'opc',
+      active: 'yes',
+      date: '05/10/2015',
+    },
+    {
+      key: '4',
+      companyname: 'AEP Ohio',
+      type: 'Electric',
+      state: 'ohio',
+      udc: 'opc',
+      active: 'yes',
+      date: '05/10/2015',
+    },
+    {
+      key: '5',
+      companyname: 'AEP Ohio',
+      type: 'Electric',
+      state: 'ohio',
+      udc: 'opc',
+      active: 'yes',
+      date: '05/10/2015',
     },
   ];
 
   const columns = [
     {
-      title: 'Name',
-      dataIndex: 'name',
-      key: 'name',
+      title: 'CompanyName',
+      dataIndex: 'companyname',
+      key: 'companyname',
     },
     {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
+      title: 'Type',
+      dataIndex: 'type',
+      key: 'type',
     },
     {
-      title: 'Address',
-      dataIndex: 'address',
-      key: 'address',
+      title: 'State',
+      dataIndex: 'state',
+      key: 'state',
+    },
+    {
+      title: 'UDC Code',
+      dataIndex: 'udc',
+      key: 'udc',
+    },
+    {
+      title: 'Is Active',
+      dataIndex: 'active',
+      key: 'active',
+    },
+    {
+      title: 'Last updated At',
+      dataIndex: 'date',
+      key: 'date',
+    },
+    {
+      title: 'Action',
+      dataIndex: 'action',
+      key: 'action',
     },
   ];
 
-  //   const datas = [
-  //     {
-  //       CompanyName: 'AEP Ohio',
-  //       type: 'electric',
-  //       state: 'ohio',
-  //       udc: 'opc',
-  //       active: 'yes',
-  //       date: '05/10/2015',
-  //     },
-  //     {
-  //       CompanyName: 'AEP Ohio',
-  //       type: 'electric',
-  //       state: 'ohio',
-  //       udc: 'opc',
-  //       active: 'yes',
-  //       date: '05/10/2015',
-  //     },
-  //     {
-  //       CompanyName: 'AEP Ohio',
-  //       type: 'electric',
-  //       state: 'ohio',
-  //       udc: 'opc',
-  //       active: 'yes',
-  //       date: '05/10/2015',
-  //     },
-  //     {
-  //       CompanyName: 'AEP Ohio',
-  //       type: 'electric',
-  //       state: 'ohio',
-  //       udc: 'opc',
-  //       active: 'yes',
-  //       date: '05/10/2015',
-  //     },
-  //     {
-  //       CompanyName: 'AEP Ohio',
-  //       type: 'electric',
-  //       state: 'ohio',
-  //       udc: 'opc',
-  //       active: 'yes',
-  //       date: '05/10/2015',
-  //     },
-  //     {
-  //       CompanyName: 'AEP Ohio',
-  //       type: 'electric',
-  //       state: 'ohio',
-  //       udc: 'opc',
-  //       active: 'yes',
-  //       date: '05/10/2015',
-  //     },
-  //   ];
   return (
     <>
-      {/* <div className="border-2 border-gray-400 w-[80%] m-auto items-center justify-center ">
-        <table className="border-2 border-black items-center justify-center ">
-          <tr>
-            <th className="border-black">Company Name</th>
-            <th>Type </th>
-            <th>State</th>
-            <th>UDC Code</th>
-            <th>Is Active</th>
-            <th>Last updated At </th>
-            <th>Action</th>
-          </tr>
-          {datas.map((data, index) => (
-            <tr key={index}>
-              <td>{data.CompanyName}</td>
-              <td>{data.type}</td>
-              <td>{data.state}</td>
-              <td>{data.udc}</td>
-              <td>{data.active}</td>
-              <td>{data.date}</td>
-              <td></td>
-            </tr>
-          ))}
-        </table>
-      </div> */}
       <div>
-        <Table dataSource={dataSource} columns={columns} />;
+        <Table
+          className="items-center  justify-center w-9/12 m-auto  "
+          dataSource={dataSource}
+          columns={columns}
+          // rows={columns}
+        />
+        ;
       </div>
     </>
   );

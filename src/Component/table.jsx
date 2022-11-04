@@ -2,6 +2,7 @@ import { type } from '@testing-library/user-event/dist/type';
 import React from 'react';
 import { Table } from 'antd';
 import 'antd/dist/antd.css';
+import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
 // import { useState } from 'react';
 
 const Tables = () => {
@@ -86,8 +87,15 @@ const Tables = () => {
     },
     {
       title: 'Action',
-      dataIndex: 'action',
       key: 'action',
+      render: (record) => {
+        return (
+          <>
+            <EditOutlined style={{ color: 'green', cursor: 'pointer' }} />
+            <DeleteOutlined style={{ color: 'red', cursor: 'pointer' }} />
+          </>
+        );
+      },
     },
   ];
 
@@ -95,12 +103,10 @@ const Tables = () => {
     <>
       <div>
         <Table
-          className="items-center  justify-center w-9/12 m-auto  "
+          className="items-center justify-center w-9/12 m-auto"
           dataSource={dataSource}
           columns={columns}
-          // rows={columns}
         />
-        ;
       </div>
     </>
   );

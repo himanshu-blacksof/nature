@@ -11,6 +11,7 @@ import Rendering from './Component/rendering';
 import Webtesting from './Component/webtesting';
 import Sidebar from './Component/sidebar';
 import Table from './Component/table';
+import Abc from './Component/abc';
 
 function App() {
   return (
@@ -27,8 +28,9 @@ function App() {
       <Form />
       <Rendering /> */}
       {/* <Webtesting /> */}
-      {/* <Sidebar /> */}
-      <Table />
+      <Sidebar />
+      {/* <Table /> */}
+      {/* <Abc /> */}
     </>
   );
 }

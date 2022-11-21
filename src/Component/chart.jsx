@@ -9,37 +9,41 @@ import {
   YAxis,
   CartesianGrid,
 } from 'recharts';
+   
 
-const pdata = [
+
+
+  // dummy data 
+const companyData = [
   {
-    name: 'MongoDb',
-    student: 11,
-    fees: 120,
+    company: 'Tata',
+    employee: 11,
+    salary: 120,
   },
   {
-    name: 'Javascript',
-    student: 15,
-    fees: 12,
+    company: 'Mahindra',
+    employee: 15,
+    salary: 12,
   },
   {
-    name: 'PHP',
-    student: 5,
-    fees: 10,
+    company: 'Hyundai',
+    employee: 5,
+    salary: 10,
   },
   {
-    name: 'Java',
-    student: 10,
-    fees: 5,
+    company: 'Honda',
+    employee: 10,
+    salary: 5,
   },
   {
-    name: 'C#',
-    student: 9,
-    fees: 4,
+    company: 'kia',
+    employee: 9,
+    salary: 4,
   },
   {
-    name: 'C++',
-    student: 10,
-    fees: 8,
+    company: 'volvo',
+    employee: 10,
+    salary: 8,
   },
 ];
 
@@ -52,16 +56,16 @@ function Chart() {
         </h1>
         <ResponsiveContainer width=" 90%" className="m-auto" aspect={3}>
           <LineChart
-            data={pdata}
+            data={companyData}
             className="items-center justify-center text-center m-auto"
           >
             <CartesianGrid />
-            <XAxis dataKey="name" interval={'preserveStartEnd'} />
+            <XAxis dataKey="company" interval={'preserveStartEnd'} />
             <YAxis></YAxis>
             <Legend />
             <Tooltip />
-            <Line dataKey="student" stroke="black" activeDot={{ r: 8 }} />
-            <Line dataKey="fees" stroke="red" activeDot={{ r: 8 }} />
+            <Line dataKey="employee" stroke="black" activeDot={{ r: 8 }} />
+            <Line dataKey="salary" stroke="red" activeDot={{ r: 8 }} />
           </LineChart>
         </ResponsiveContainer>
       </div>

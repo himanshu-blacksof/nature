@@ -1,9 +1,7 @@
-import { type } from '@testing-library/user-event/dist/type';
 import React from 'react';
 import { Table } from 'antd';
 import 'antd/dist/antd.css';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
-// import { useState } from 'react';
 
 const Tables = () => {
   const dataSource = [
@@ -52,6 +50,24 @@ const Tables = () => {
       active: 'yes',
       date: '05/10/2015',
     },
+    {
+      key: '6',
+      companyname: 'AEP Ohio',
+      type: 'Electric',
+      state: 'ohio',
+      udc: 'opc',
+      active: 'yes',
+      date: '05/10/2015',
+    },
+    {
+      key: '7',
+      companyname: 'AEP Ohio',
+      type: 'Electric',
+      state: 'ohio',
+      udc: 'opc',
+      active: 'yes',
+      date: '05/10/2015',
+    },
   ];
 
   const columns = [
@@ -88,7 +104,7 @@ const Tables = () => {
     {
       title: 'Action',
       key: 'action',
-      render: (record) => {
+      render: () => {
         return (
           <>
             <EditOutlined style={{ color: 'green', cursor: 'pointer' }} />
@@ -106,6 +122,7 @@ const Tables = () => {
           className="items-center justify-center w-9/12 m-auto"
           dataSource={dataSource}
           columns={columns}
+          pagination={false}
         />
       </div>
     </>
